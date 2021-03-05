@@ -1,28 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Compliment</title>
-    <link rel="stylesheet" href="complimentor.css" />
-  </head>
-  <body>
-    <div class="wrapper">
-      <div id="content-container" class="content-container">
-        <h1>Are you going to sleep without smiling that perfect smile?</h1>
-        <div class="space"><br /></div>
-        <input
-          type="text"
-          id="receiver"
-          class="receiver"
-          alt="Input your compliment"
-          maxlength="60"
-          onfocus="stopBlinker()"
-          onblur="blinker()"
-        />
-      </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compliment</title>
+  <link rel="stylesheet" href="complimentor.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <div id="content-container" class="content-container">
+      <h1>Are you going to sleep without smiling that perfect smile?</h1>
+      <div class="space"><br /></div>
+      <form method="POST" action="http://127.0.0.1:8000/addCompliment">
+        <input type="text" name="compliment" id="receiver" class="receiver" alt="Input your compliment" maxlength="60"
+          onfocus="stopBlinker()" onblur="blinker()" />
+      </form>
     </div>
-  </body>
-  <script src="complimentor.js"></script>
+  </div>
+</body>
+<script src="complimentor.js"></script>
+
 </html>
