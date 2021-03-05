@@ -7,12 +7,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Compliment</title>
   <link rel="stylesheet" href="complimentor.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    var settings = {
+      "async": true,
+      "crossDomain": true,
+      "url": "http://127.0.0.1:8000/getCompliment",
+      "method": "GET"
+    }
+
+    $.ajax(settings).done(function (response) {
+
+      var content = response.compliment;
+      console.log(response);
+      $("#yourCompliment").append(content);
+
+    });
+  </script>
 </head>
 
 <body>
   <div class="wrapper">
     <div id="content-container" class="content-container">
-      <h1>Are you going to sleep without smiling that perfect smile?</h1>
+      <h1 id="yourCompliment"></h1>
       <div class="space"><br /></div>
       <form method="POST" action="http://127.0.0.1:8000/addCompliment">
         <input type="text" name="compliment" id="receiver" class="receiver" alt="Input your compliment" maxlength="60"
@@ -22,5 +39,16 @@
   </div>
 </body>
 <script src="complimentor.js"></script>
+<script>
+  $(document).ready(function () {
+    var $form = $('form');
+    $form.submit(function () {
+      $.post($(this).attr('action'), $(this).serialize(), function (response) {
+        console.log(response);
+      }, 'json');
+      return false;
+    });
+  });
+</script>
 
 </html>
