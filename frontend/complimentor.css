@@ -1,12 +1,15 @@
 .wrapper {
   margin: 0 auto;
   width: 100%;
+  height: 100vh;
   max-width: 1600px;
+  background-image: url("paper.webp");
 }
 .receiver {
   padding: 10px 20px;
   width: 65%;
   height: 15vh;
+  color: white;
   text-align: center;
   display: block;
   margin: auto;
@@ -14,7 +17,7 @@
   /*border: black 2px dashed;*/
   cursor: text;
   border-radius: 20px;
-  background-color: #fbd35b;
+  filter: hue-rotate(320deg);
   -webkit-animation: 8s ease 0s normal forwards 1 fadein;
   animation: 8s ease 0s normal forwards 1 fadein;
 }
@@ -31,7 +34,6 @@
 }
 
 .content-container {
-  color: #fbd35b;
   position: absolute;
   top: 35%;
 }
@@ -65,5 +67,27 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .content-container {
+    position: absolute;
+    top: 25%;
+  }
+
+  .content-container h1 {
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .space {
+    line-height: 100px;
+  }
+  .receiver {
+    border-radius: 12px;
+    width: 60%;
+    height: 5vh;
+    font-size: 15px;
   }
 }
