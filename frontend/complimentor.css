@@ -23,7 +23,7 @@
 }
 
 .space {
-  line-height: 35px;
+  line-height: 50px;
 }
 .receiver::placeholder {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -34,7 +34,9 @@
 }
 
 .content-container {
-  position: absolute;
+  position: relative;
+  display: inline;
+  width: auto;
   top: 35%;
 }
 
@@ -70,7 +72,29 @@
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 950px) {
+  .content-container {
+    position: absolute;
+    top: 30%;
+  }
+
+  .content-container h1 {
+    text-align: center;
+    font-size: 40px;
+  }
+
+  .space {
+    line-height: 70px;
+  }
+  .receiver {
+    border-radius: 12px;
+    width: 60%;
+    height: 10vh;
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 790px) {
   .content-container {
     position: absolute;
     top: 25%;
