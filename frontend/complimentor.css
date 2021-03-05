@@ -18,8 +18,8 @@
   cursor: text;
   border-radius: 20px;
   filter: hue-rotate(320deg);
-  -webkit-animation: 8s ease 0s normal forwards 1 fadein;
-  animation: 8s ease 0s normal forwards 1 fadein;
+  -webkit-animation: 10s ease 0s normal forwards 1 fadein;
+  animation: 10s ease 0s normal forwards 1 fadein;
 }
 
 .space {
