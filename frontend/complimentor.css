@@ -1,57 +1,69 @@
-
-.receiver
-{
-    padding: 10px 20px;
-    width: 65%;
-    height: 40px;
-    text-align: center;
-    display: block;
-    margin: auto;
-    /*border: black 2px dashed;*/
-    cursor: text;
-    border-radius: 20px;
-    background-color: #fbd35b;
-    -webkit-animation: 8s ease 0s normal forwards 1 fadein;
-    animation: 8s ease 0s normal forwards 1 fadein;
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1600px;
 }
-.receiver::placeholder
-{
-    font-size: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: white;
-
-}
-.receiver:focus
-{
-    outline: none;    
+.receiver {
+  padding: 10px 20px;
+  width: 65%;
+  height: 15vh;
+  text-align: center;
+  display: block;
+  margin: auto;
+  font-size: 35px;
+  /*border: black 2px dashed;*/
+  cursor: text;
+  border-radius: 20px;
+  background-color: #fbd35b;
+  -webkit-animation: 8s ease 0s normal forwards 1 fadein;
+  animation: 8s ease 0s normal forwards 1 fadein;
 }
 
-.content-container
-{
-    color: #fbd35b;
-    position: absolute;
-    top: 35%;
+.space {
+  line-height: 35px;
+}
+.receiver::placeholder {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: white;
+}
+.receiver:focus {
+  outline: none;
 }
 
-.content-container h1
-{
-    text-align: center;
-    font-size: 48px;
-    font-family: monospace;
-    -webkit-animation: 4s ease 0s normal forwards 1 fadein;
-    animation: 4s ease 0s normal forwards 1 fadein;
-    
+.content-container {
+  color: #fbd35b;
+  position: absolute;
+  top: 35%;
 }
 
-@keyframes fadein{
-    0% { opacity:0; }
-    66% { opacity:0; }
-    100% { opacity:1; }
+.content-container h1 {
+  text-align: center;
+  font-size: 48px;
+  font-family: monospace;
+  -webkit-animation: 4s ease 0s normal forwards 1 fadein;
+  animation: 4s ease 0s normal forwards 1 fadein;
 }
 
-@-webkit-keyframes fadein{
-    0% { opacity:0; }
-    66% { opacity:0; }
-    100% { opacity:1; }
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
