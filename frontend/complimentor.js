@@ -1,6 +1,7 @@
 const receiver = document.getElementById("receiver");
 const contentContainer = document.getElementById("content-container");
 const placeholderMessage = "Be a reason someone smiles today...";
+
 var colourScheme = [
   "#fbd35b",
   "#fb9d5b",
@@ -10,6 +11,7 @@ var colourScheme = [
   "#5b9bfb",
   "#e462b6",
 ];
+
 function colourSelector() {
   let random = Math.floor(Math.random() * 7);
   console.log(random);
@@ -19,9 +21,6 @@ function colourSelector() {
   contentContainer.style.color = selectedColour;
 }
 
-colourSelector();
-
-blinker();
 function blinker() {
   blink = setInterval(function () {
     if (receiver.placeholder == placeholderMessage) receiver.placeholder = " ";
@@ -33,3 +32,6 @@ function stopBlinker() {
   receiver.placeholder = " ";
   clearInterval(blink);
 }
+
+colourSelector();
+blinker();
