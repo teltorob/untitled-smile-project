@@ -12,9 +12,15 @@
       <div id="content-container" class="content-container">
         <h1>Are you going to sleep without smiling that perfect smile?</h1>
         <div class="space"><br /></div>
-        <input type="text" id="receiver" class="receiver" placeholder="Be a
-        reason someone smiles today..." onfocus="this.placeholder = ''"
-        onblur="this.placeholder = 'Be a reason someone smiles today...'"" >
+        <input
+          type="text"
+          id="receiver"
+          class="receiver"
+          placeholder="Be a
+          reason someone smiles today..."
+          onfocus="stopBlinker()"
+          onblur="blinker()"
+        />
       </div>
     </div>
   </body>
