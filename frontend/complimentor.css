@@ -35,8 +35,15 @@ body {
   border-top-right-radius: 20px;
 
   filter: hue-rotate(320deg);
+/*  -webkit-animation: 10s ease 0s normal forwards 1 fadein;
+  animation: 10s ease 0s normal forwards 1 fadein;*/
+}
+
+.receiver-container
+{
   -webkit-animation: 10s ease 0s normal forwards 1 fadein;
   animation: 10s ease 0s normal forwards 1 fadein;
+  
 }
 
 .space {
