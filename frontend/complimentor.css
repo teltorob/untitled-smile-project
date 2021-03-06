@@ -139,12 +139,19 @@ button:focus
     font-size: 40px;
   }
 
+  button 
+  {
+    width: 35%;
+    font-size: 10px;
+  }
+
   .space {
     line-height: 70px;
   }
   .receiver {
-    border-radius: 12px;
-    width: 60%;
+    width: 70%;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
     height: 10vh;
     font-size: 25px;
   }
@@ -160,14 +167,18 @@ button:focus
     text-align: center;
     font-size: 30px;
   }
-
+  button 
+  {
+    width: 37.5%;
+    height: 3vh;
+    font-size: 10px;
+  }
   .space {
     line-height: 100px;
   }
   .receiver {
-    border-radius: 12px;
-    width: 60%;
-    height: 5vh;
+    width: 75%;
+    height: 8vh;
     font-size: 15px;
   }
 }
