@@ -28,9 +28,12 @@ body {
   display: block;
   margin: auto;
   font-size: 35px;
-  /*border: black 2px dashed;*/
+  border: black 2px solid;
+  border-bottom: none;
   cursor: text;
-  border-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+
   filter: hue-rotate(320deg);
   -webkit-animation: 10s ease 0s normal forwards 1 fadein;
   animation: 10s ease 0s normal forwards 1 fadein;
@@ -52,6 +55,38 @@ body {
   display: inline;
   width: auto;
   top: 35%;
+}
+
+button
+{
+  display: inline;
+  width: 32.5%;
+  font-weight: 900;
+  font-size: 15px;
+  letter-spacing: 2px;
+  height: 5vh;
+  border: 2px solid black;
+  color: white;
+  filter: hue-rotate(325deg);
+  /*filter: brightness(1.1);*/
+}
+
+button:hover
+{
+  cursor: pointer;
+  filter: brightness(1);
+}
+
+button:focus
+{
+  border: 2px solid black;
+  filter: hue-rotate(320deg);
+
+}
+
+.button-container
+{
+  text-align: center;
 }
 
 .content-container h1 {
@@ -88,7 +123,7 @@ body {
 
 @media only screen and (max-width: 950px) {
   .content-container {
-    position: absolute;
+    position: relative;
     top: 30%;
   }
 
@@ -110,7 +145,7 @@ body {
 
 @media only screen and (max-width: 790px) {
   .content-container {
-    position: absolute;
+    position: relative;
     top: 25%;
   }
 

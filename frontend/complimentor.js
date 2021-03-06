@@ -1,5 +1,7 @@
 const receiver = document.getElementById("receiver");
 const contentContainer = document.getElementById("content-container");
+const resetButton = document.getElementById("resetButton");
+const submitButton = document.getElementById("submitButton");
 const placeholderMessage = "Be a reason someone smiles today...";
 
 var colourScheme = [
@@ -18,6 +20,8 @@ function colourSelector() {
   console.log(selectedColour);
   receiver.style.backgroundColor = selectedColour;
   contentContainer.style.color = selectedColour;
+  resetButton.style.backgroundColor = selectedColour;
+  submitButton.style.backgroundColor = selectedColour;
 }
 
 function blinker() {
