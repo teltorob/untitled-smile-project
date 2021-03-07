@@ -12,6 +12,18 @@ body {
   height: 100%;
 }
 
+.header
+{
+  width: 100%;
+  text-align: center;
+  height: 1.5em;
+  letter-spacing: 2px;
+  background: white;
+  font-weight: bolder;
+  font-size: 1.5em;
+  /* margin: auto; */
+  font-family: monospace;
+}
 .wrapper {
   margin: 0 auto;
   width: 100%;
@@ -110,13 +122,29 @@ button:focus
   animation: 4s ease 0s normal forwards 1 fadein;
 }
 
+.zoomer
+{
+  animation:  0.5s ease 0s normal forwards 1 zoom;
+}
+
+@keyframes zoom {
+  25%,75%
+  {
+    transform: scale(1.1);
+  }
+  50%,100%
+  {
+    transform: scale(1)
+  }
+}
+
 .shaker {
     animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
     perspective: 1000px;
   }
-  
+
   @keyframes shake {
     10%, 90% {
       transform: translate3d(-1px, 0, 0);

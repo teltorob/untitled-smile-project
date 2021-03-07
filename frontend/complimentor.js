@@ -22,6 +22,8 @@ var colourScheme = [
 function valid()
 {
   if (receiver && receiver.value) {
+    receiverContainer.classList.add("zoomer");
+    setTimeout(function(){receiverContainer.classList.remove("zoomer")},600);
     return true;
   }
   else{
