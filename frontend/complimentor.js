@@ -16,7 +16,6 @@ var colourScheme = [
   "#62e484",
   "#5b9bfb",
   "#e462b6",
-  "black",
 ];
 
 function valid()
@@ -36,7 +35,7 @@ function valid()
 }
 
 function colourSelector() {
-  let random = Math.floor(Math.random() * 6);
+  let random = Math.floor(Math.random() * 5);
   console.log(random);
   let selectedColour = colourScheme[random];
   console.log(selectedColour);
