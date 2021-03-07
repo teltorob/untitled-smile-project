@@ -57,11 +57,12 @@
        e.preventDefault();
        $.post($(this).attr('action'), $(this).serialize(), function (response) {
        console.log(response);
-       if (response.success=="ok") submissionStatus(true);
+       if (response.success=="ok") 
+       {submissionStatus(true);
+       }
        else submissionStatus(false);
       }, 'json');
       return false;
-      alert("Thank you for your compliment, have a nice day!")
     }
 
     else

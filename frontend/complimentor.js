@@ -24,6 +24,7 @@ function valid()
   if (receiver && receiver.value) {
     receiverContainer.classList.add("zoomer");
     setTimeout(function(){receiverContainer.classList.remove("zoomer")},600);
+
     return true;
   }
   else{
@@ -65,6 +66,7 @@ function submissionStatus (status)
     submitButton.style.filter="brightness(1)"
     receiver.style.borderColor=successColor;
     form.reset(); 
+    setTimeout(function() {alert("Thank you for your compliment, have a nice day!")},1800);
   }
 
   else
@@ -73,7 +75,7 @@ function submissionStatus (status)
     submitButton.style.backgroundColor=failColor;
     submitButton.style.filter="brightness(1)"
     receiver.style.borderColor=failColor;
-
+    setTimeout(function() {alert("Please fill in your compliment!")},1800);
   }
 
 
