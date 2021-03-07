@@ -1,9 +1,14 @@
 const receiver = document.getElementById("receiver");
+const receiverContainer = document.getElementById("receiverContainer");
 const contentContainer = document.getElementById("content-container");
 const submitButton = document.getElementById("submitButton");
 const placeholderMessage = "Be a reason someone smiles today...";
-const successColor="green";
-const failColor="red";
+const form = document.getElementById("form");
+const successColor="#4eb352";
+const failColor="#ff2929";
+
+setTimeout(function(){receiverContainer.classList.remove("receiver-container")},8000);
+
 
 var colourScheme = [
   "#fbd35b",
@@ -13,6 +18,19 @@ var colourScheme = [
   "#e462b6",
   "black",
 ];
+
+function valid()
+{
+  if (receiver && receiver.value) {
+    return true;
+  }
+  else{
+    receiverContainer.classList.add("shaker");
+    setTimeout(function(){receiverContainer.classList.remove("shaker")},800);
+    return false;
+    
+  }
+}
 
 function colourSelector() {
   let random = Math.floor(Math.random() * 6);
@@ -40,16 +58,20 @@ function submissionStatus (status)
 {
   if(status)
   {
-    submitButton.style.borderColor, 
-    submitButton.style.backgroundColor,
+    submitButton.style.borderColor=successColor;
+    submitButton.style.backgroundColor=successColor;
+    submitButton.style.filter="brightness(1)"
     receiver.style.borderColor=successColor;
+    form.reset(); 
   }
 
   else
   {
-    submitButton.style.borderColor, 
-    submitButton.style.backgroundColor,
+    submitButton.style.borderColor=failColor;
+    submitButton.style.backgroundColor=failColor;
+    submitButton.style.filter="brightness(1)"
     receiver.style.borderColor=failColor;
+
   }
 
 
