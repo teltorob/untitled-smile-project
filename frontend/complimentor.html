@@ -34,25 +34,34 @@
       <div class="receiver-container">
       <form method="POST" action="http://127.0.0.1:8000/addCompliment">
         <input type="text" name="compliment" id="receiver" class="receiver" alt="Input your compliment" maxlength="60"
-          onfocus="stopBlinker()" onblur="blinker()" />
-      </form>
-      <div class="button-container">
-        <button id="resetButton">RESET</button><button id="submitButton">SUBMIT</button></div>
-    </div>    
+          onfocus="stopBlinker()" onblur="blinker()" autocomplete="off" />
+          <div class="button-container">
+            <button id="submitButton" class="submit-button" type="submit" >SUBMIT</button></div>
+          </div>    
+        </form>
     </div>
   </div>
 </body>
 <script src="complimentor.js"></script>
 <script>
   $(document).ready(function () {
+
+    var $submit = $("#submitButton");
+    $submit.click(function() {
     var $form = $('form');
-    $form.submit(function () {
-      $.post($(this).attr('action'), $(this).serialize(), function (response) {
-        console.log(response);
+   $form.submit(function (e) {
+     e.preventDefault();
+     $.post($(this).attr('action'), $(this).serialize(), function (response) {
+       console.log(response);
+       if (response.success=="ok") submissionStatus(true);
+       else submissionStatus(false);
       }, 'json');
       return false;
     });
   });
+
+
+});
 </script>
 
 </html>

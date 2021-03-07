@@ -1,8 +1,9 @@
 const receiver = document.getElementById("receiver");
 const contentContainer = document.getElementById("content-container");
-const resetButton = document.getElementById("resetButton");
 const submitButton = document.getElementById("submitButton");
 const placeholderMessage = "Be a reason someone smiles today...";
+const successColor="green";
+const failColor="red";
 
 var colourScheme = [
   "#fbd35b",
@@ -20,7 +21,6 @@ function colourSelector() {
   console.log(selectedColour);
   receiver.style.backgroundColor = selectedColour;
   contentContainer.style.color = selectedColour;
-  resetButton.style.backgroundColor = selectedColour;
   submitButton.style.backgroundColor = selectedColour;
 }
 
@@ -34,6 +34,25 @@ function blinker() {
 function stopBlinker() {
   receiver.placeholder = " ";
   clearInterval(blink);
+}
+
+function submissionStatus (status)
+{
+  if(status)
+  {
+    submitButton.style.borderColor, 
+    submitButton.style.backgroundColor,
+    receiver.style.borderColor=successColor;
+  }
+
+  else
+  {
+    submitButton.style.borderColor, 
+    submitButton.style.backgroundColor,
+    receiver.style.borderColor=failColor;
+  }
+
+
 }
 
 colourSelector();
