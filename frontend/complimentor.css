@@ -63,7 +63,7 @@ body {
 
 
 .space {
-  line-height: 50px;
+  line-height: 75px;
 }
 .receiver::placeholder {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
