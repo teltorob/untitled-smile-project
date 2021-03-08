@@ -47,14 +47,13 @@
 <script>
   $(document).ready(function () {
     
-    var $submit = $("#submitButton");
-    $submit.click(function() {
     var $form = $('form');
     $form.submit(function (e) {
       if(valid())
      {
        console.log("valid")
        e.preventDefault();
+       e.stopImmediatePropagation(); 
        $.post($(this).attr('action'), $(this).serialize(), function (response) {
        console.log(response);
        if (response.success=="ok") 
@@ -66,11 +65,13 @@
     }
 
     else
+    {
     submissionStatus(false);
+    e.preventDefault();
+    e.stopImmediatePropagation(); 
+    return false;
+    }
     });
-  });
-
-
 });
 </script>
 

@@ -6,6 +6,7 @@ const placeholderMessage = "Be a reason someone smiles today...";
 const form = document.getElementById("form");
 const successColor="#4eb352";
 const failColor="#ff2929";
+var selectedColour="";
 
 setTimeout(function(){receiverContainer.classList.remove("receiver-container")},8000);
 
@@ -21,14 +22,10 @@ var colourScheme = [
 function valid()
 {
   if (receiver && receiver.value) {
-    receiverContainer.classList.add("zoomer");
-    setTimeout(function(){receiverContainer.classList.remove("zoomer")},600);
-
+    clearInterval(inputCheck);
     return true;
   }
   else{
-    receiverContainer.classList.add("shaker");
-    setTimeout(function(){receiverContainer.classList.remove("shaker")},800);
     return false;
     
   }
@@ -37,11 +34,21 @@ function valid()
 function colourSelector() {
   let random = Math.floor(Math.random() * 5);
   console.log(random);
-  let selectedColour = colourScheme[random];
+  selectedColour = colourScheme[random];
   console.log(selectedColour);
+  setColor();
+
+}
+
+function setColor()
+{
   receiver.style.backgroundColor = selectedColour;
   contentContainer.style.color = selectedColour;
   submitButton.style.backgroundColor = selectedColour;
+  submitButton.style.borderColor = "black";
+  submitButton.style.filter = "hue-rotate(325deg)";
+  receiver.style.borderColor = "black";
+
 }
 
 function blinker() {
@@ -60,25 +67,48 @@ function submissionStatus (status)
 {
   if(status)
   {
-    submitButton.style.borderColor=successColor;
-    submitButton.style.backgroundColor=successColor;
-    submitButton.style.filter="brightness(1)"
-    receiver.style.borderColor=successColor;
+
+    stateSetter(successColor);
+
+    receiverContainer.classList.add("zoomer");
+    setTimeout(function(){receiverContainer.classList.remove("zoomer")},600);
+
+
     form.reset(); 
     setTimeout(function() {alert("Thank you for your compliment, have a nice day!")},1800);
+    setTimeout(function() {window.location.reload()},1900);
   }
 
   else
   {
-    submitButton.style.borderColor=failColor;
-    submitButton.style.backgroundColor=failColor;
-    submitButton.style.filter="brightness(1)"
-    receiver.style.borderColor=failColor;
-    setTimeout(function() {alert("Please fill in your compliment!")},1800);
+
+    stateSetter(failColor);
+
+    receiverContainer.classList.add("shaker");
+    setTimeout(function(){receiverContainer.classList.remove("shaker")},800);
+
+    setTimeout(function() {alert("Please fill in your compliment!")},900);
+    
+    inputCheck=setInterval(()=> {
+      var isValid =valid();
+      if(isValid)
+      {
+        setColor();
+      }
+    },600)
   }
 
 
 }
+
+function stateSetter(color)
+{
+  submitButton.style.borderColor=color;
+  submitButton.style.backgroundColor=color;
+  submitButton.style.filter="brightness(1)"
+  receiver.style.borderColor=color;
+}
+
 
 colourSelector();
 blinker();
