@@ -75,7 +75,7 @@ function submissionStatus (status)
 
 
     form.reset(); 
-    setTimeout(function() {alert("Thank you for your compliment, have a nice day!")},1800);
+    setTimeout(function() {alert("Thank you for your compliment, have a nice day!")},1200);
     setTimeout(function() {window.location.reload()},1900);
   }
 
