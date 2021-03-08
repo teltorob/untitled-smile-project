@@ -22,7 +22,6 @@ var colourScheme = [
 function valid()
 {
   if (receiver && receiver.value) {
-    clearInterval(inputCheck);
     return true;
   }
   else{
@@ -94,6 +93,7 @@ function submissionStatus (status)
       if(isValid)
       {
         setColor();
+        clearInterval(inputCheck);
       }
     },600)
   }
