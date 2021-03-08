@@ -1,6 +1,6 @@
 # untitled-smile-project
 
-Micheal Scott's favourite website (100% true)
+Michael Scott's favourite website (100% true)
 
 A project on a site where you can get compliments if you feel lonely. Or make someone else's day better by writing something good for them :)
 
