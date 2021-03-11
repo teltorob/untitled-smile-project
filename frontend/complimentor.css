@@ -12,8 +12,7 @@ body {
   height: 100%;
 }
 
-.header
-{
+.header {
   width: 100%;
   text-align: center;
   height: 1.5em;
@@ -47,20 +46,18 @@ body {
   border-top-right-radius: 20px;
 
   filter: hue-rotate(320deg);
-/*  -webkit-animation: 10s ease 0s normal forwards 1 fadein;
+  /*  -webkit-animation: 10s ease 0s normal forwards 1 fadein;
   animation: 10s ease 0s normal forwards 1 fadein;*/
 }
 
-
-
-.receiver-container
-{
-  -webkit-animation: 10s ease 0s normal forwards 1 fadein;
-  animation: 10s ease 0s normal forwards 1 fadein;
-  
+.receiver:hover {
+  box-shadow: 0px 0px 40px grey;
 }
 
-
+.receiver-container {
+  -webkit-animation: 10s ease 0s normal forwards 1 fadein;
+  animation: 10s ease 0s normal forwards 1 fadein;
+}
 
 .space {
   line-height: 75px;
@@ -71,6 +68,7 @@ body {
 }
 .receiver:focus {
   outline: none;
+  box-shadow: 0px 0px 40px grey;
 }
 
 .content-container {
@@ -80,8 +78,7 @@ body {
   top: 35%;
 }
 
-button
-{
+button {
   width: 65%;
   font-weight: 900;
   font-size: 15px;
@@ -94,23 +91,19 @@ button
   /*filter: brightness(1.1);*/
 }
 
-.submit-button:hover
-{
-  background-image:none;
-  background-color:#ffffff !important;
+.submit-button:hover {
+  background-image: none;
+  background-color: #ffffff !important;
   cursor: pointer;
   color: black;
 }
 
-button:focus
-{
+button:focus {
   outline: none;
   border: 2px solid black;
-
 }
 
-.button-container
-{
+.button-container {
   text-align: center;
 }
 
@@ -122,47 +115,50 @@ button:focus
   animation: 4s ease 0s normal forwards 1 fadein;
 }
 
-.zoomer
-{
-  animation:  0.5s ease 0s normal forwards 1 zoom;
+.zoomer {
+  animation: 0.5s ease 0s normal forwards 1 zoom;
 }
 
 @keyframes zoom {
-  25%,75%
-  {
+  25%,
+  75% {
     transform: scale(1.1);
   }
-  50%,100%
-  {
-    transform: scale(1)
+  50%,
+  100% {
+    transform: scale(1);
   }
 }
 
 .shaker {
-    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
-    transform: translate3d(0, 0, 0);
-    backface-visibility: hidden;
-    perspective: 1000px;
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
   }
 
-  @keyframes shake {
-    10%, 90% {
-      transform: translate3d(-1px, 0, 0);
-    }
-    
-    20%, 80% {
-      transform: translate3d(2px, 0, 0);
-    }
-  
-    30%, 50%, 70% {
-      transform: translate3d(-4px, 0, 0);
-    }
-  
-    40%, 60% {
-      transform: translate3d(4px, 0, 0);
-    }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
   }
 
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
 
 @keyframes fadein {
   0% {
@@ -199,8 +195,7 @@ button:focus
     font-size: 40px;
   }
 
-  button 
-  {
+  button {
     width: 70%;
     font-size: 10px;
   }
@@ -227,8 +222,7 @@ button:focus
     text-align: center;
     font-size: 30px;
   }
-  button 
-  {
+  button {
     width: 75%;
     height: 3vh;
     font-size: 10px;
